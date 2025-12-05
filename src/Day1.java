@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Day1 {
     public static void main(String[] args) throws FileNotFoundException {
-        File ilMioFile = new File("./AdventOfCode/input.txt");
+        File ilMioFile = new File("./input.txt");
         Scanner in = new Scanner(ilMioFile);    
         // Input
         String[] mieStringhe = new String[5000];
