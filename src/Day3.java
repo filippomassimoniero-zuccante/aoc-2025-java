@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Day3 {
-    private static int getMaxJoltage(String s) {
+    public static int getMaxJoltage(String s) {
         int maxJoltage = 0;
         for (int i = 0; i < s.length(); i++) {
             for (int j = i+1; j < s.length(); j++) {
@@ -20,7 +20,7 @@ public class Day3 {
         return maxJoltage;
     }   
 
-    private static boolean exist(String s, int targetDigit, int remainingDigits) {
+    public static boolean exist(String s, int targetDigit, int remainingDigits) {
         int idx = s.indexOf(targetDigit + '0');
         
         if (idx == -1 || idx + remainingDigits > s.length()) {
@@ -30,14 +30,14 @@ public class Day3 {
         return true;
     }
 
-    private static long pow10(int remainingDigits) {
+    public static long pow10(int remainingDigits) {
         long x = 1;
         for (int i = 1; i < remainingDigits; i++) {
             x *= 10;
         }
         return x;
     }
-    private static long maxJoltageOf(String s, int remainingDigits) {
+    public static long maxJoltageOf(String s, int remainingDigits) {
         if(remainingDigits == 0) return 0;
         for (int targetDigit = 9; targetDigit >= 0; targetDigit--) {
             if(exist(s, targetDigit, remainingDigits)) {
@@ -56,7 +56,6 @@ public class Day3 {
         Scanner in = new Scanner(myFile);    
         // Input
         List<String> lines = new ArrayList<>();
-        int cont = 0;
         while(in.hasNextLine()) {
             lines.add(in.nextLine());
         }
