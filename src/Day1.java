@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class App {
+public class Day1 {
     public static void main(String[] args) throws FileNotFoundException {
         File ilMioFile = new File("./AdventOfCode/input.txt");
         Scanner in = new Scanner(ilMioFile);    
